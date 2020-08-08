@@ -1,0 +1,20 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    height: 86px;
+    background-color: #2E6B98;
+}
+
+a{
+    color: white;
+}
+
+.header-menu-div{
+    margin-left: 50px;
+}
+
+#ask{
+    margin-left: 200px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DERMALAY</title>
+    <meta name="description" content="Use the power of Machine Learning to diagnose Skin Lesions.">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
+
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div> 
+
+    <!-- Homepage -->
+    <div>
+      <div>
+        <!-- The src img can be in the imgae folders /public/images/imgname.format -->
+        <img id = "selected-image" src="/images/samplepic.jpg" alt="image for analysis" height="250">
+      </div>
+
+      <div id="btn">
+        <button onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)">Predict</button>
+      </div>
+
+      <span>
+        <p>Results</p>
+        <ol id="prediction-list"></ol>
+      </span>
+
+    </div>  <!-- End of Home page -->
+
+    <!-- Simulate the button -->
+    <div class="hide">
+      <button id='predict-button'>Predict</button>
+    </div>
+
+    <div class='hide'>
+      <!-- Multiple attribute allows the user to upload multiple files -->
+      <input type="file" id="image-selector" multiple>
+    </div>
+
+
+    <div>
+      <!-- Loading Tensorflowjs -->
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.10.0"></script> -->
+
+      <!-- Loading jQuery -->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+      <!-- Loading files -->
+      <script src="/javascripts/target_classes.js"></script>
+      <script src="/javascripts/app_startup_code.js"></script>
+      <script src="/javascripts/app_batch_prediction_code.js"></script>
+    </div>
+
+  </div> <!-- End of main container -->
+
+
+</body>
+</html>
